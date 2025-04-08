@@ -1,0 +1,76 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp"
+    android:textAlignment="center">
+
+    <!-- Movie Poster -->
+    <ImageView
+        android:id="@+id/moviePoster"
+        android:layout_width="100dp"
+        android:layout_height="150dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+       />
+
+    <!-- Movie Title -->
+    <TextView
+        android:id="@+id/movieTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Movie Title"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"
+        app:layout_constraintStart_toEndOf="@id/moviePoster"
+        app:layout_constraintTop_toTopOf="@id/moviePoster"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        android:ellipsize="end"
+        android:maxLines="1" />
+
+    <!-- Movie Year -->
+    <TextView
+        android:id="@+id/movieYear"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Year"
+        android:textSize="14sp"
+        android:textColor="@android:color/darker_gray"
+        app:layout_constraintStart_toEndOf="@id/moviePoster"
+        app:layout_constraintTop_toBottomOf="@id/movieTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0" />
+
+    <!-- Movie Genres -->
+
+    <!-- Movie Rating -->
+    <TextView
+        android:id="@+id/movieGenre"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Genres"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@id/moviePoster"
+        app:layout_constraintTop_toBottomOf="@id/movieYear" />
+
+    <TextView
+        android:id="@+id/movieRating"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Rating"
+        android:textSize="14sp"
+        android:textColor="@android:color/holo_orange_dark"
+        app:layout_constraintStart_toEndOf="@id/moviePoster"
+        app:layout_constraintTop_toBottomOf="@id/movieGenre"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
