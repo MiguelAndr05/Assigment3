@@ -65,7 +65,7 @@ public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.SearchView
     public int getItemCount() {
         return movies.size();
     }
-
+    /// ViewHolder class to hold the views for each movie item
     public static class SearchViewHolder extends RecyclerView.ViewHolder {
         TextView title, year;
         ImageView poster;

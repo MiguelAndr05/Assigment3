@@ -6,7 +6,7 @@
     android:padding="8dp"
     android:textAlignment="center">
 
-    <!-- Movie Poster -->
+    
     <ImageView
         android:id="@+id/moviePoster"
         android:layout_width="100dp"
@@ -17,7 +17,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
        />
 
-    <!-- Movie Title -->
+    
     <TextView
         android:id="@+id/movieTitle"
         android:layout_width="0dp"
@@ -33,7 +33,7 @@
         android:ellipsize="end"
         android:maxLines="1" />
 
-    <!-- Movie Year -->
+  
     <TextView
         android:id="@+id/movieYear"
         android:layout_width="0dp"
@@ -46,9 +46,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0" />
 
-    <!-- Movie Genres -->
-
-    <!-- Movie Rating -->
+    
     <TextView
         android:id="@+id/movieGenre"
         android:layout_width="0dp"

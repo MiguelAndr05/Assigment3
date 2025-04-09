@@ -25,6 +25,8 @@ import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
 
+
+// This ViewModel class handles the logic for searching and fetching movie data from the OMDb API and Firebase Firestore.
 public class SearchViewModel extends ViewModel {
 
     private static final String API_URL = "https://www.omdbapi.com/?apikey=f047527a";
@@ -33,6 +35,8 @@ public class SearchViewModel extends ViewModel {
     private final FirebaseFirestore db = FirebaseFirestore.getInstance();
     private final OkHttpClient client = new OkHttpClient();
     private final List<MovieModel> movieList = new ArrayList<>();
+
+
 
     public LiveData<List<MovieModel>> getMovieInfo() {
         return movieInfo;
@@ -170,12 +174,14 @@ public class SearchViewModel extends ViewModel {
         });
     }
 
+    // Add a movie to the favorites list in Firestore (Firebase)
     public void addMovieToFavorites(MovieModel movie) {
         db.collection("movies").add(movie)
                 .addOnSuccessListener(documentReference -> Log.i("MovieViewModel", "Movie added to favorites"))
                 .addOnFailureListener(e -> Log.e("MovieViewModel", "Failed to add movie to favorites: " + e.getMessage()));
     }
-
+    
+    // Fetch all movies from Firestore (Firebase) and update the LiveData
     public void fetchMoviesFromFavorites() {
         db.collection("movies").get()
                 .addOnSuccessListener(queryDocumentSnapshots -> {

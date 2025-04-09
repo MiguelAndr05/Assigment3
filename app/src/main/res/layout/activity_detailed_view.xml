@@ -50,9 +50,9 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.554" />
 
-    <!-- Genres -->
+    
 
-    <!-- Year -->
+    
     <TextView
         android:id="@+id/genres"
         android:layout_width="156dp"
@@ -67,7 +67,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.622" />
 
-    <!-- Rating -->
+    
     <TextView
         android:id="@+id/year"
         android:layout_width="72dp"
@@ -96,7 +96,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.624" />
 
-    <!-- Back Button -->
+   
 
 
     <Button

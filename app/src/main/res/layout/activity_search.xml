@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     tools:context=".View.SearchViewActivity">
 
-    <!-- Page Title -->
+  
     <TextView
         android:id="@+id/searchPageTitle"
         android:layout_width="wrap_content"
@@ -21,7 +21,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="16dp" />
 
-    <!-- Search Bar -->
+    
     <EditText
         android:id="@+id/searchBar"
         android:layout_width="0dp"
@@ -35,7 +35,6 @@
         android:layout_marginTop="16dp"
         android:layout_marginHorizontal="16dp" />
 
-    <!-- Search Button -->
     <Button
         android:id="@+id/searchBtn"
         android:layout_width="wrap_content"
@@ -47,7 +46,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="8dp" />
 
-    <!-- RecyclerView for Search Results -->
+  
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/searchResultsRecycler"
         android:layout_width="0dp"

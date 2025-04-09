@@ -17,7 +17,7 @@ public class EditMovieActivity extends AppCompatActivity {
     private EditText titleEditText, genresEditText, yearEditText, ratingEditText, descriptionEditText;
     private Button saveButton;
     private FirebaseFirestore db;
-    private String movieId; // Store the document ID
+    private String movieId; 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,7 +49,7 @@ public class EditMovieActivity extends AppCompatActivity {
 
         saveButton.setOnClickListener(v -> saveMovieDetails());
     }
-
+    //./ Fetch movie details from Firestore using the title
     private void fetchMovieDetailsByTitle(String title) {
         db.collection("movies")
                 .whereEqualTo("title", title)
@@ -73,7 +73,7 @@ public class EditMovieActivity extends AppCompatActivity {
                 })
                 .addOnFailureListener(e -> Toast.makeText(this, "Failed to fetch movie details", Toast.LENGTH_SHORT).show());
     }
-
+    // Save the updated movie details to Firestore
     private void saveMovieDetails() {
         String title = titleEditText.getText().toString();
         String genres = genresEditText.getText().toString();

@@ -13,6 +13,8 @@ public class MyViewHolder extends RecyclerView.ViewHolder {
     TextView title, genres, rating, year;
     ImageView thumbnail;
 
+
+    //
     public MyViewHolder(@NonNull View itemView) {
         super(itemView);
         title = itemView.findViewById(R.id.movieTitle);

@@ -12,6 +12,8 @@ public class MovieModel {
 
     public MovieModel(){};
 
+
+    // The ID in this constructor doesnt work i was unable to get it to work/ pull from the api
     public MovieModel(String id, String title, String yearReleased, String moviePosterURL){
         this.id = id;
         this.title = title;

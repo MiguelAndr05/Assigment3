@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:padding="16dp">
 
-    <!-- Title EditText -->
+    
     <EditText
         android:id="@+id/titleEditText"
         android:layout_width="0dp"
@@ -17,7 +17,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="16dp" />
 
-    <!-- Genres EditText -->
+    
     <EditText
         android:id="@+id/genresEditText"
         android:layout_width="0dp"
@@ -29,7 +29,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="16dp" />
 
-    <!-- Year Released EditText -->
+
     <EditText
         android:id="@+id/yearEditText"
         android:layout_width="0dp"
@@ -41,7 +41,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="16dp" />
 
-    <!-- Rating EditText -->
+   
     <EditText
         android:id="@+id/ratingEditText"
         android:layout_width="0dp"
@@ -53,7 +53,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="16dp" />
 
-    <!-- Description EditText -->
     <EditText
         android:id="@+id/descriptionEditText"
         android:layout_width="0dp"
@@ -67,7 +66,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="16dp" />
 
-    <!-- Save Button -->
+  
     <Button
         android:id="@+id/saveButton"
         android:layout_width="0dp"

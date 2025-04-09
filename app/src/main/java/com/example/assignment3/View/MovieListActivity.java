@@ -65,7 +65,7 @@ public class MovieListActivity extends AppCompatActivity {
                 })
                 .addOnFailureListener(e -> Log.e("MovieListActivity", "Error fetching movies: " + e.getMessage()));
     }
-
+    /// Handle movie click event to show options for Edit or Delete
     private void onMovieClicked(MovieModel movie) {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("Choose an action")
@@ -82,7 +82,7 @@ public class MovieListActivity extends AppCompatActivity {
                 })
                 .show();
     }
-
+    /// Delete movie by title from Firestore
     private void deleteMovieByTitle(String title) {
         db.collection("movies")
                 .whereEqualTo("title", title)
@@ -93,7 +93,7 @@ public class MovieListActivity extends AppCompatActivity {
                             document.getReference().delete()
                                     .addOnSuccessListener(aVoid -> {
                                         Toast.makeText(this, "Movie deleted successfully", Toast.LENGTH_SHORT).show();
-                                        fetchMoviesFromFirestore(); // Refresh the list
+                                        fetchMoviesFromFirestore();
                                     })
                                     .addOnFailureListener(e -> {
                                         Toast.makeText(this, "Failed to delete movie", Toast.LENGTH_SHORT).show();

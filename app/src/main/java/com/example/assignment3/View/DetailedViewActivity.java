@@ -26,7 +26,7 @@ public class DetailedViewActivity extends AppCompatActivity {
 
         db = FirebaseFirestore.getInstance();
 
-        // Find views by ID
+        // Initialize views
         TextView title = findViewById(R.id.title);
         TextView genres = findViewById(R.id.genres);
         TextView year = findViewById(R.id.year);
@@ -35,7 +35,7 @@ public class DetailedViewActivity extends AppCompatActivity {
         ImageView poster = findViewById(R.id.poster);
         Button favoriteBtn = findViewById(R.id.favoriteBtn);
 
-        // Get data from Intent
+        // Get data from the intent
         Intent intent = getIntent();
         String movieTitle = intent.getStringExtra("title");
         String movieGenres = intent.getStringExtra("genres");
