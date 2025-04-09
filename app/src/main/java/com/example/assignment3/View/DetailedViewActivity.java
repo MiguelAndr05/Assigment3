@@ -45,7 +45,7 @@ public class DetailedViewActivity extends AppCompatActivity {
         String moviePoster = intent.getStringExtra("poster");
 
         Button backButton = findViewById(R.id.backBtn);
-        backButton.setOnClickListener(v -> finish()); // Ensure this works
+        backButton.setOnClickListener(v -> finish());
 
         // Set data to views
         title.setText(movieTitle != null ? movieTitle : "N/A");
@@ -63,7 +63,7 @@ public class DetailedViewActivity extends AppCompatActivity {
         favoriteBtn.setOnClickListener(v -> {
             // Create a MovieModel object using the provided constructor
             MovieModel movie = new MovieModel(
-                    null, // Firestore will generate the ID, so we pass null here
+                    null,
                     movieTitle != null ? movieTitle : "N/A",
                     movieYear != null ? movieYear : "N/A",
                     movieGenres != null ? movieGenres : "N/A",
@@ -72,18 +72,15 @@ public class DetailedViewActivity extends AppCompatActivity {
                     movieDescription != null ? movieDescription : "N/A"
             );
 
-            // Debugging log to verify the movie object
-            Log.d("DetailedViewActivity", "Adding movie to favorites: " + movie.getTitle());
+
 
             // Add the movie to Firestore
             db.collection("movies").add(movie)
                     .addOnSuccessListener(documentReference -> {
                         Toast.makeText(this, "Movie added to favorites", Toast.LENGTH_SHORT).show();
-                        Log.i("DetailedViewActivity", "Movie added to Firestore with ID: " + documentReference.getId());
                     })
                     .addOnFailureListener(e -> {
                         Toast.makeText(this, "Failed to add movie to favorites", Toast.LENGTH_SHORT).show();
-                        Log.e("DetailedViewActivity", "Error adding movie to Firestore: " + e.getMessage());
                     });
         });
 

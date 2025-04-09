@@ -14,20 +14,24 @@ public class RegisterActivity extends AppCompatActivity {
     private FirebaseAuth auth;
 
     @Override
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
-        auth = FirebaseAuth.getInstance(); // Initialize FirebaseAuth
+        // Initialize FirebaseAuth
+        auth = FirebaseAuth.getInstance();
 
         EditText emailField = findViewById(R.id.emailField);
         EditText passwordField = findViewById(R.id.passwordField);
         Button registerButton = findViewById(R.id.registerButton);
 
+        // Register button logic
         registerButton.setOnClickListener(v -> {
             String email = emailField.getText().toString().trim();
             String password = passwordField.getText().toString().trim();
 
+            // Checks if email and password are filled in
             if (email.isEmpty() || password.isEmpty()) {
                 Toast.makeText(this, "Please fill in all fields", Toast.LENGTH_SHORT).show();
                 return;
@@ -37,7 +41,7 @@ public class RegisterActivity extends AppCompatActivity {
                 .addOnCompleteListener(task -> {
                     if (task.isSuccessful()) {
                         Toast.makeText(this, "Registration successful!", Toast.LENGTH_SHORT).show();
-                        finish(); // Go back to the login screen
+                        finish(); // Takes user back to the login screen
                     } else {
                         Toast.makeText(this, "Registration failed: " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                     }

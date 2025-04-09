@@ -73,7 +73,7 @@ public class MovieListActivity extends AppCompatActivity {
                     if (which == 0) {
                         // Edit the movie
                         Intent intent = new Intent(MovieListActivity.this, EditMovieActivity.class);
-                        intent.putExtra("movieTitle", movie.getTitle()); // Pass the movie title
+                        intent.putExtra("movieTitle", movie.getTitle());
                         startActivity(intent);
                     } else if (which == 1) {
                         // Delete the movie
@@ -85,7 +85,7 @@ public class MovieListActivity extends AppCompatActivity {
 
     private void deleteMovieByTitle(String title) {
         db.collection("movies")
-                .whereEqualTo("title", title) // Query by title
+                .whereEqualTo("title", title)
                 .get()
                 .addOnSuccessListener(queryDocumentSnapshots -> {
                     if (!queryDocumentSnapshots.isEmpty()) {

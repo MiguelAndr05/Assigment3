@@ -150,7 +150,7 @@ public class SearchViewModel extends ViewModel {
                     }
 
                     MovieModel movie = new MovieModel();
-                    movie.setId(detailJson.optString("imdbID", "N/A")); // Set the ID here
+                    movie.setId(detailJson.optString("imdbID", "N/A"));
                     movie.setTitle(detailJson.optString("Title", "N/A"));
                     movie.setYearReleased(detailJson.optString("Year", "N/A"));
                     movie.setGenres(detailJson.optString("Genre", "N/A"));
@@ -187,7 +187,7 @@ public class SearchViewModel extends ViewModel {
                             movieList.add(movie);
                         }
                     }
-                    movieInfo.postValue(movieList); // Update LiveData
+                    movieInfo.postValue(movieList);
                     Log.i("SearchViewModel", "Movies fetched from favorites");
                 })
                 .addOnFailureListener(e -> Log.e("SearchViewModel", "Error fetching movies: " + e.getMessage()));

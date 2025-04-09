@@ -16,7 +16,7 @@ public class MyViewHolder extends RecyclerView.ViewHolder {
     public MyViewHolder(@NonNull View itemView) {
         super(itemView);
         title = itemView.findViewById(R.id.movieTitle);
-        genres = itemView.findViewById(R.id.movieGenre); // Ensure this matches the updated layout
+        genres = itemView.findViewById(R.id.movieGenre);
         rating = itemView.findViewById(R.id.movieRating);
         year = itemView.findViewById(R.id.movieYear);
         thumbnail = itemView.findViewById(R.id.moviePoster);

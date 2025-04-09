@@ -50,7 +50,7 @@ public class LoginActivity extends AppCompatActivity {
                     });
         });
 
-        // Navigate to RegisterActivity
+        //Sends user to RegisterActivity
         registerButton.setOnClickListener(v -> {
             Intent intent = new Intent(this, RegisterActivity.class);
             startActivity(intent);

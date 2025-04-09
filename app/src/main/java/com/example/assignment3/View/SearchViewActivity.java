@@ -34,7 +34,7 @@ public class SearchViewActivity extends AppCompatActivity {
         // Initialize ViewModel
         searchViewModel = new ViewModelProvider(this).get(SearchViewModel.class);
 
-        // Find views by ID
+        // Find views by ID (Doesnt work still have zero idea why believe its an api issue)
         searchField = findViewById(R.id.searchBar);
         searchResultsRecyclerView = findViewById(R.id.searchResultsRecycler);
         Button searchBtn = findViewById(R.id.searchBtn);
@@ -56,7 +56,7 @@ public class SearchViewActivity extends AppCompatActivity {
             }
         });
 
-        // Handle search button click
+        // Handles search button click
         searchBtn.setOnClickListener(v -> {
             String query = searchField.getText().toString().trim();
             if (!query.isEmpty()) {
@@ -66,7 +66,7 @@ public class SearchViewActivity extends AppCompatActivity {
             }
         });
 
-        // Handle "Enter" key press in the search bar
+        // Handles "Enter" key press in the search bar
         searchField.setOnEditorActionListener((v, actionId, event) -> {
             String query = searchField.getText().toString().trim();
             if (!query.isEmpty()) {

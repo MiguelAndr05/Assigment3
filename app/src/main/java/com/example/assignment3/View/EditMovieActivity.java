@@ -52,12 +52,12 @@ public class EditMovieActivity extends AppCompatActivity {
 
     private void fetchMovieDetailsByTitle(String title) {
         db.collection("movies")
-                .whereEqualTo("title", title) // Query by title
+                .whereEqualTo("title", title)
                 .get()
                 .addOnSuccessListener(queryDocumentSnapshots -> {
                     if (!queryDocumentSnapshots.isEmpty()) {
-                        DocumentSnapshot document = queryDocumentSnapshots.getDocuments().get(0); // Get the first match
-                        movieId = document.getId(); // Save the document ID for updating
+                        DocumentSnapshot document = queryDocumentSnapshots.getDocuments().get(0);
+                        movieId = document.getId();
                         MovieModel movie = document.toObject(MovieModel.class);
                         if (movie != null) {
                             titleEditText.setText(movie.getTitle());
